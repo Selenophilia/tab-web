@@ -1,0 +1,119 @@
+.footer {
+  & {
+    width: 100%;
+    height: 392px;
+  }
+
+  & .content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+  }
+  & .left {
+    height: 100%;
+    width: 50%;
+    padding-left: 100px;
+    background: $white;
+
+    @include for-tablet {
+      padding-left: 30px;
+    }
+   
+  }
+  & .right {
+    height: 100%;
+    width: 50%;
+    background: $blue;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    @include for-tablet {
+      padding: 45px 20px;
+     }
+  }
+
+
+  & .footer-logo {
+      background: $blue;
+      height: 200px;
+      width: 150px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  & .description,
+  & .text {
+    color: $white;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 32px;
+    text-transform: uppercase;
+   
+  }
+
+  & .description {
+    width: 400px;
+    color: $blue;
+    text-transform:inherit;
+    @include for-tablet {
+      width: auto;
+      font-size: 12px;
+     }
+  }
+
+  & .trademark,
+  & .footer-item {
+    color: $white;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include for-tablet {
+      font-size: 12px;
+     }
+  }
+
+
+  & .owner {
+    color: $white;
+    text-transform: capitalize;
+    @include for-tablet {
+      font-size: 12px;
+    }
+  }
+
+  & .inner-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 230px;
+    @include for-tablet {
+     font-size: 12px;
+    }
+  }
+
+  & .icon-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  & .btn-float {
+    background: $white !important;
+  }
+
+  .btn-float .MuiSvgIcon-root {
+    color: $blue !important;
+  }
+
+  & .inner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+ 
+}

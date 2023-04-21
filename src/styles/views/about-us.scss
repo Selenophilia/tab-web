@@ -1,0 +1,165 @@
+.about-section {
+  & {
+    height: 100%;
+    position: relative;
+    @include for-tablet {
+      flex-direction: column;
+      padding: 50px 0px;
+    }
+  }
+
+
+  & .rectangle {
+    position: absolute;
+    width: 30px;
+    height: 162px;
+    left: 0px;
+    top: -60px;
+    background: $gray30;
+    @include for-tablet {
+      top: 0px;
+    }
+  }
+  & .content {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 200px;
+  
+    @include for-tablet {
+      flex-direction: column;
+      margin-bottom: 100px;
+    }
+  }
+
+  & .left-content {
+    position: relative;
+  }
+
+  & .faded {
+    background-image: url("../../assets/horse.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    z-index: 1000;
+    height: 535px;
+    width: 535px;
+    opacity: 0.5;
+    left: 50px;
+    top: -10px;
+    border-radius: 20px;
+    position: absolute;
+    @include for-laptop {
+      height: 390px;
+      width: 390px;
+    }
+  }
+
+  & .left {
+    padding: 30px;
+    width: 50%;
+    display: flex;
+    @include for-tablet {
+      padding: 0px;
+      width: 100%;
+      justify-content: center;
+    }
+
+  }
+
+
+  & .right {
+    display: flex;
+    width: 50%;
+    @include for-tablet {
+      width: 100%;
+    }
+  }
+
+  & .right-content {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 32px;
+    @include for-tablet {
+      justify-content: center;
+      margin: auto;
+      width: auto;
+    }
+
+  }
+
+  & .underline {
+    border: 1px dashed $gray20;
+    @include for-tablet {
+     display: none;
+    }
+  }
+  
+  & .title {
+   font-weight: $bold; 
+   font-size: 60px;
+   color: $blue;
+   text-transform: uppercase;
+   @include for-laptop {
+    font-size: 50px;
+  }
+  }
+
+  & .heading,
+  & .description {
+    font-weight: $normal; 
+    font-size: 16px;
+    color: $blue;
+    width: 425px;
+    text-align: left;
+    line-height: 22.5px;
+    margin-bottom: 32px;
+   }
+
+   & .sub ,
+   & .heading{
+    color: $white;
+    font-weight: $normal;
+    width: 100%;
+    font-size: 20px;
+    line-height: 124.5%;
+    text-align: left;
+    letter-spacing: -0.025em;
+    @include for-tablet {
+      font-size: 18px;
+    }
+
+    @include for-phone {
+      font-size: 16px;
+    }
+  }
+
+  & .sub {
+    text-align: center;
+    margin-top: 50px;
+
+  }
+
+  & .container {
+    background: $blue;
+    height: 535px;
+    width: 535px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    @include for-laptop {
+      height: 400px;
+      width: 400px;
+    }
+  }
+
+  & .image-container {
+    border-radius: 20px;
+    z-index: 3000;
+   
+  }
+
+}

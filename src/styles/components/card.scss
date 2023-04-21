@@ -1,0 +1,33 @@
+@import '../globals/variables';
+@import '../globals/mixins';
+
+.card {
+  width: 350px;
+  height: 428px;
+  background: $blue !important;
+  color: $white10 !important;
+  border-radius: 20px !important;
+  padding: 35px;
+  box-shadow: none !important;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  & .card-title {
+    font-size: 14px;
+    color: $gray20;
+  }
+
+  & .card-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  & .card-img {
+    border-radius: 30px;
+  }
+}

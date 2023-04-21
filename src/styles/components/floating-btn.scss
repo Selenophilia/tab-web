@@ -1,0 +1,31 @@
+.float-container {
+  & {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+   & .btn-float {
+      border: 1px solid $gray20 !important;
+      background: $blue !important;
+      & .MuiSvgIcon-root {
+        color: $white;
+      }
+    
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    
+    & .up {
+      cursor: pointer;
+      text-decoration: underline;
+      margin-top: 14px !important ;
+      @include for-tablet {
+        font-size: 12px;
+       }
+    }
+}

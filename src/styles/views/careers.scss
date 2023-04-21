@@ -1,0 +1,106 @@
+.careers {
+  & {
+    padding: 100px 0px 100px 40px;
+  }
+
+  & .heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  & .text {
+    font-weight: $normal;
+    font-size: 16px;
+    letter-spacing: 0.025em;
+    width: 100px;
+    text-transform: uppercase;
+    color: #4B6290;
+  }
+  & .underline {
+    width: 100%;
+    margin: 0px 8px;
+    border-bottom: 1px dashed $gray20;
+  }
+   
+  & .title {
+    font-weight: $bold;
+    font-size: 60px;
+    color: $blue;
+    text-transform: uppercase;
+  }
+
+
+  & .content {
+    display: flex;
+   justify-content: flex-start;
+  }
+
+  & .description {
+    font-size: 16px;
+    font-weight: $normal;
+    line-height: 20px;
+    letter-spacing: -0.030em;
+    color: $blue;
+    margin: 20px 0px 30px 0px;
+  }
+
+  & .card-btn,
+  & .learn-more {
+    width: 221px;
+    height: 66px;
+    color: $blue;
+    border: 1px solid $gray20;
+    text-transform: uppercase;
+    & .icon-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    & .icon {
+      background: $blue;
+      height: 28px;
+      width: 28px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  & .card-btn {
+
+    color: $white;
+    & .icon {
+      color: $blue;
+      background: $white;
+    }
+
+    
+  }
+
+
+
+  & .left {
+    display: flex;
+    height: 250px;
+    width: 40%;
+    flex-direction: column;
+  }
+
+  & .right {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: scroll;
+
+    @include for-laptop {
+      margin-left: 40px;
+    }
+
+    @include for-phone {
+      margin-left: 90px;
+    }
+  }
+}

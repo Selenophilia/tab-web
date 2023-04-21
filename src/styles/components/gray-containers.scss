@@ -1,0 +1,69 @@
+.overlapping-containers {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+  & .gray-container {
+    width: 95%;
+    height: 600px;
+    background: $gray40;
+    border: 1px solid $gray40;
+    border-radius: 20px; 
+    padding: 100px;
+    @include for-tablet {
+      padding: 50px;
+    }
+  
+  }
+
+  & .gray-content {
+    display: flex;
+    height: 100%;
+
+  }
+
+  & .gray-content > .left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    opacity: 1;
+  }
+
+  & .gray-content > .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    opacity: 1;
+  };
+
+  & .-three,
+  & .-two,
+  & .-one {
+    padding: 0px;
+    position: absolute;
+    margin: auto;
+    width: 95%;
+    top: 1603px;
+    background: $gray60;
+    border: none;
+    border-radius: 20px;
+    z-index: -1;
+    top: -50px;
+    opacity: 0.5;
+
+  }
+
+  & .-two {
+    background: $gray10;
+    top: -80px;
+  }
+
+  & .-three {
+    background: $gray50;
+    top: -110px;
+  }
+}

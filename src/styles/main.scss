@@ -1,0 +1,20 @@
+@import './globals/variables';
+@import './globals/mixins';
+
+// globals
+@import './globals/general';
+
+// components
+@import './components/app-header.scss';
+@import './components/button.scss';
+@import './components/floating-btn';
+@import './components/gray-containers';
+@import './components/card';
+
+// views 
+@import './views/hero-section.scss';
+@import './views/about-us.scss';
+@import './views/careers.scss';
+@import './views/news.scss';
+@import './views/banner.scss';
+@import './views/footer.scss';

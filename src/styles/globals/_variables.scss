@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+$font-family: 'Roboto', sans-serif;
+
+// Colors
+$white: #fff;
+$white10: #F5F5F5;
+$blue: #1A2A57;
+$blue10: #0f4c81;
+$blue20: #4B6290;
+
+
+$gray: #c4c4c4;
+$gray10: #C0C0C5;
+$gray20: #9CADCB;
+$gray30: #D9D9D9;
+$gray40: #81828E;
+$gray50: #E7E7E7;
+$gray60: #9C9DAB;
+
+$black: #020024;
+
+$purple: #958fec;
+$purple10: #B150C5;
+
+
+
+$transition: all cubic-bezier(0.62, 0.01, 0.01, 1) 300ms;
+// Font Weight
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+
+$pad: 8px;
+$border-color: #c4c4c4;

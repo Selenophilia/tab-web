@@ -39,6 +39,10 @@
     display: flex;
     justify-content: flex-start;
 
+    @include for-retina {
+      font-size: 180px;
+    }
+
     @include for-desktop {
       font-size: clamp(50px, 30%, 70px);
     }
@@ -80,6 +84,8 @@
     margin-right: 10px;
     @include for-phone {
       margin: 0px;
+      height: 40px;
+      width: 60px;
     }
   }
   & .sport {
@@ -89,7 +95,14 @@
   & .underline {
     margin: 0px 8px;
     border-bottom: 2px solid $gray20;
+
+    &::after{
+      content: "\a";
+      white-space: pre;
   }
+  }
+
+
 
 
   & .btn-group {

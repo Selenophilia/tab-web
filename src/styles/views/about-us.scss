@@ -59,7 +59,6 @@
 
   & .left {
     padding: 30px;
-    width: 50%;
     display: flex;
     @include for-tablet {
       padding: 0px;
@@ -72,10 +71,7 @@
 
   & .right {
     display: flex;
-    width: 50%;
-    @include for-tablet {
-      width: 100%;
-    }
+    width: 100%;
   }
 
   & .right-content {

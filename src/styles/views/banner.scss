@@ -16,6 +16,9 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    @include for-retina {
+      padding: 0px 400px;
+    }
   }
 
   & .mid-heading {

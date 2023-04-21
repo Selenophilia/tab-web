@@ -6,8 +6,20 @@ import FloatingActionButtons from '@/components/FloatingActionButton'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
 import Button from '@/components/Button'
 import ArrowIcon from '../../assets/Arrow.svg'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 const HeroSection = () => {
+    const theme = createTheme()
+    theme.typography.h3 = {
+        fontSize: '1.2rem',
+        '@media (min-width:600px)': {
+            fontSize: '1.5rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '2rem',
+        },
+    }
+
     const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
         const anchor = (
             (event.target as HTMLDivElement).ownerDocument || document
@@ -30,9 +42,11 @@ const HeroSection = () => {
             <Box component="div" className="shadow">
                 <div className="container">
                     <div className="content">
-                        <Typography className="text">
-                            Fuelling the future of
-                        </Typography>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant="h3" className="text">
+                                Fuelling the future of
+                            </Typography>
+                        </ThemeProvider>
                         <div className="text">
                             <div className="text-cont">
                                 <ImageContainer
@@ -41,16 +55,27 @@ const HeroSection = () => {
                                     width={72}
                                     src={HeroImage}
                                 />
-                                <Typography className="text sport">
-                                    Sport
-                                </Typography>
+                                <ThemeProvider theme={theme}>
+                                    <Typography className="text sport">
+                                        Sport
+                                    </Typography>
+                                </ThemeProvider>
                             </div>
-                            <Typography className="text">
-                                ,<span className="underline">racing </span> and
-                                <span className="underline">communities</span>
-                            </Typography>
+                            <ThemeProvider theme={theme}>
+                                <Typography className="text">
+                                    ,<span className="underline">racing </span>{' '}
+                                    and
+                                    <span className="underline">
+                                        communities
+                                    </span>
+                                </Typography>
+                            </ThemeProvider>
                         </div>
-                        <Typography className="text">in New Zealand</Typography>
+                        <ThemeProvider theme={theme}>
+                            <Typography className="text">
+                                in New Zealand
+                            </Typography>
+                        </ThemeProvider>
                     </div>
                     <div className="btn-group">
                         <FloatingActionButtons

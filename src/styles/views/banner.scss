@@ -38,6 +38,10 @@
     font-size: 180px;
     font-weight: $bold;
     text-transform: uppercase;
+
+    @include for-desktop {
+      font-size: clamp(130px, 30%, 180px);
+    }
     @include for-laptop {
       font-size: 100px;
     }
@@ -46,6 +50,10 @@
     }
     @include for-phone {
       font-size: 80px;
+    }
+
+    @include for-xs-phone {
+      font-size: clamp(40px, 30%, 50px); 
     }
   }
 

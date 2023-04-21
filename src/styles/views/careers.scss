@@ -34,6 +34,9 @@
   & .content {
     display: flex;
    justify-content: flex-start;
+   @include for-xs-phone {
+    flex-direction: column;
+  }
   }
 
   & .description {
@@ -76,8 +79,6 @@
       color: $blue;
       background: $white;
     }
-
-    
   }
 
 
@@ -87,6 +88,10 @@
     height: 250px;
     width: 40%;
     flex-direction: column;
+    @include for-xs-phone {
+      width: 100%;
+    }
+    
   }
 
   & .right {
@@ -101,6 +106,10 @@
 
     @include for-phone {
       margin-left: 90px;
+    }
+
+    @include for-xs-phone {
+     margin: 32px 0px 0px 0px;
     }
   }
 }

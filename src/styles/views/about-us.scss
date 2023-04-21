@@ -2,6 +2,9 @@
   & {
     height: 100%;
     position: relative;
+    @include for-retina {
+      padding: 0px 150px;
+    }
     @include for-tablet {
       flex-direction: column;
       padding: 50px 0px;

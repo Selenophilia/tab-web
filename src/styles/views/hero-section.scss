@@ -22,29 +22,43 @@
     @include for-laptop {
       z-index: 500;
     }
+    @include for-tablet {
+      padding: 0px 20px;
+    }
+    @include for-xs-phone {
+      padding: 0px 10px;
+    }
   }
   
  
 
   &  .text {
-    font-size: 70px;
     color: $white10;
     font-weight: $bold;
     text-transform: uppercase;
     display: flex;
     justify-content: flex-start;
+
+    @include for-desktop {
+      font-size: clamp(50px, 30%, 70px);
+    }
+    
     @include for-laptop {
-      font-size: 43px;
+      font-size: clamp(45px, 30%, 60px);
     }
     @include for-tablet {
-      font-size: 35px;
+      font-size: clamp(35px, 30%, 70px);
       display: flex;
       justify-content: flex-start;
       align-items: center;
     }
 
     @include for-phone {
-      font-size: 25px;
+      font-size: clamp(30px, 30%, 40px);
+    }
+
+    @include for-xs-phone {
+      font-size: clamp(30px, 30%, 50px)
     }
   } 
 
@@ -52,8 +66,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 300px;
+    width: 250px;
     border-bottom: 2px solid $purple10;
+    @include for-laptop {
+      width: 220px
+    }
+ 
   }
 
 

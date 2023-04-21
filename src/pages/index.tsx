@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Head from 'next/head'
 import Main from '@/layouts/Main'
 import HeroSection from '@/views/HeroSection'
@@ -7,8 +8,11 @@ import Careers from '@/views/Careers'
 import News from '@/views/News'
 import Banner from '@/views/Banner'
 import Footer from '@/views/Footer'
+import { useQuery } from '@apollo/client'
+import { getCareers } from './api/queries'
 
 export default function Home() {
+    const { loading, data } = useQuery(getCareers)
     return (
         <Main>
             <Head>
@@ -23,7 +27,7 @@ export default function Home() {
             <AppHeader />
             <HeroSection />
             <About />
-            <Careers />
+            <Careers data={data} loading={loading} />
             <News />
             <Banner />
             <Footer />

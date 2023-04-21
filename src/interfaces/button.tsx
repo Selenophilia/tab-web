@@ -1,4 +1,4 @@
-export default interface Button {
+export default interface ButtonProp {
     variant?: string
     color?: string
     className?: string

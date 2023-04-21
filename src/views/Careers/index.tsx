@@ -4,11 +4,19 @@ import Card from '@/components/Card'
 import { careers } from '../../pages/api/mock'
 import ArrowIcon from '../../assets/Arrow.svg'
 import { East } from '@mui/icons-material'
+import CareerProp from '../../interfaces/career'
+import { useEffect } from 'react'
 
-const Careers = () => {
+const Careers = ({ data, loading }: CareerProp) => {
     const handleBtn = () => {
         window.open('https://www.tabnz.org/current-roles', '_blank')
     }
+
+    useEffect(() => {
+        if (!loading) {
+            console.log('useEffect', data)
+        }
+    }, [loading])
 
     return (
         <div className="careers" id="careers-anchor">
@@ -35,33 +43,35 @@ const Careers = () => {
                 </div>
                 <div className="right">
                     <Stack direction="row" spacing={2}>
-                        {careers.map((career) => (
-                            <Card
-                                key={career.id}
-                                title={'Job Title'}
-                                description={career.jobTitle}
-                                subTitle={'Location'}
-                                subDescription={career.location}
-                                footerTitle={career.posted}
-                                footer={
-                                    <>
-                                        <Button
-                                            onClick={handleBtn}
-                                            className="card-btn"
-                                            color="blue"
-                                            text="Learn More"
-                                            icon={
-                                                <East
-                                                    style={{
-                                                        fontSize: '12px  ',
-                                                    }}
-                                                />
-                                            }
-                                        />
-                                    </>
-                                }
-                            />
-                        ))}
+                        {!loading &&
+                            data.allCareers.length > 0 &&
+                            data.allCareers.map((career: any, idx: any) => (
+                                <Card
+                                    key={idx}
+                                    title={'Job Title'}
+                                    description={career.jobTitle}
+                                    subTitle={'Location'}
+                                    subDescription={career.location}
+                                    footerTitle={career.posted}
+                                    footer={
+                                        <>
+                                            <Button
+                                                onClick={handleBtn}
+                                                className="card-btn"
+                                                color="blue"
+                                                text="Learn More"
+                                                icon={
+                                                    <East
+                                                        style={{
+                                                            fontSize: '12px  ',
+                                                        }}
+                                                    />
+                                                }
+                                            />
+                                        </>
+                                    }
+                                />
+                            ))}
                     </Stack>
                 </div>
             </div>

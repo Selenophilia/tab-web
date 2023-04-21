@@ -1,7 +1,14 @@
 import cx from 'classnames'
-import Button from '../../interfaces/button'
+import ButtonProp from '../../interfaces/button'
 
-const Button = ({ color, variant, className, text, icon, onClick }: Button) => {
+const Button = ({
+    color,
+    variant,
+    className,
+    text,
+    icon,
+    onClick,
+}: ButtonProp) => {
     let colorClass = ''
     let variantClass = ''
 

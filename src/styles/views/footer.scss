@@ -98,6 +98,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
+    & svg {
+      cursor: pointer;
+    }
   }
 
   & .btn-float {
@@ -114,6 +118,4 @@
     align-items: center;
     flex-direction: column;
   }
-
- 
 }

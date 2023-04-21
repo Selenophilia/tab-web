@@ -4,10 +4,14 @@ import TabLogo from '../../assets/tabLogo.png'
 import ImageContainer from '../ImageContainer/ImageContainer'
 import LinkIcon from '../../assets/link.svg'
 import MenuIcon from '@mui/icons-material/Menu'
-import IconButton from '@mui/material/IconButton'
-import { MenuItem, Menu, MenuList } from '@mui/material'
-import Divider from '@mui/material/Divider'
-import Paper from '@mui/material/Paper'
+import {
+    MenuItem,
+    Menu,
+    MenuList,
+    Divider,
+    Paper,
+    IconButton,
+} from '@mui/material'
 
 const AppHeader = ({}) => {
     const [isMenuOpen, setMenuOpen] = useState<null | HTMLElement>(null)
@@ -21,7 +25,14 @@ const AppHeader = ({}) => {
             (event.target as HTMLLIElement).ownerDocument || document
         ).querySelector(`#${tag}-anchor`)
 
-        if (anchor) {
+        if (title.toLowerCase() === 'reports') {
+            window.open(' https://www.tabnz.org/industry-information', '_blank')
+        } else if (title.toLowerCase() === 'grants') {
+            window.open(
+                'https://www.tabnz.org/gaming-grants-information-dates',
+                '_blank',
+            )
+        } else if (anchor) {
             anchor.scrollIntoView({
                 block: 'center',
                 behavior: 'smooth',

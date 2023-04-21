@@ -1,7 +1,7 @@
 import cx from 'classnames'
 import Button from '../../interfaces/button'
 
-const Button = ({ color, variant, className, text, icon }: Button) => {
+const Button = ({ color, variant, className, text, icon, onClick }: Button) => {
     let colorClass = ''
     let variantClass = ''
 
@@ -37,6 +37,7 @@ const Button = ({ color, variant, className, text, icon }: Button) => {
 
     return (
         <button
+            onClick={() => onClick()}
             className={cx(
                 'btn-root',
                 { [`${variantClass}`]: true },

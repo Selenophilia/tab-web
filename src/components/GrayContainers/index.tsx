@@ -4,6 +4,9 @@ import Button from '../../components/Button'
 import ArrowIcon from '../../assets/Arrow.svg'
 
 const GrayContainer = () => {
+    const handleBtn = () => {
+        window.open('https://www.tabnz.org/safer-betting', '_blank')
+    }
     return (
         <Box
             component="div"
@@ -27,6 +30,7 @@ const GrayContainer = () => {
                     </Box>
                     <Box component="div" className="right">
                         <Button
+                            onClick={handleBtn}
                             color="white"
                             variant="rounded"
                             text="Learn More"

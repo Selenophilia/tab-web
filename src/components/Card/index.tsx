@@ -1,6 +1,4 @@
 import CardProps from '@/interfaces/card'
-import Button from '../Button'
-import ArrowIcon from '../../assets/Arrow.svg'
 import {
     Card,
     CardActions,

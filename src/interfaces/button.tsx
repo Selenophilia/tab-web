@@ -4,5 +4,5 @@ export default interface Button {
     className?: string
     text?: string
     icon?: React.ReactNode
-    onClick?: Function
+    onClick: Function
 }

@@ -4,7 +4,11 @@ import Card from '@/components/Card'
 import ArrowIcon from '../../assets/Arrow.svg'
 import { news } from '@/pages/api/mock'
 import { CardContent } from '@mui/material'
+
 const News = () => {
+    const handleBtn = () => {
+        window.open(' https://www.tabnz.org/news', '_blank')
+    }
     return (
         <div className="news" id="news-anchor">
             <div className="content">
@@ -15,6 +19,7 @@ const News = () => {
                             Catch up on the latest news from TAB NZ
                         </Typography>
                         <Button
+                            onClick={handleBtn}
                             className="learn-more"
                             color="white"
                             text="Learn More"

@@ -1,13 +1,13 @@
 import cx from 'classnames'
-
-import TabLogo from '../../assets/tabLogo.png'
+import FloatingActionButtons from '@/components/FloatingActionButton'
 import ImageContainer from '@/components/ImageContainer/ImageContainer'
 import { Typography } from '@mui/material'
 import FBIcon from '../../assets/Facebook.svg'
 import LinkedIcon from '../../assets/Linkedin.svg'
 import TwitterIcon from '../../assets/Twitter.svg'
-import FloatingActionButtons from '@/components/FloatingActionButton'
+import TabLogo from '../../assets/tabLogo.png'
 import { ArrowUpward } from '@mui/icons-material'
+
 const Footer = () => {
     const handleBtnClick = (
         event: React.MouseEvent<HTMLLIElement>,
@@ -91,8 +91,22 @@ const Footer = () => {
                         <div className="socials">
                             <Typography className="text">Socials</Typography>
                             <div className="icon-container">
-                                <FBIcon />
-                                <TwitterIcon />
+                                <FBIcon
+                                    onClick={() =>
+                                        window.open(
+                                            'https://www.facebook.com/TAB/',
+                                            '_blank',
+                                        )
+                                    }
+                                />
+                                <TwitterIcon
+                                    onClick={() =>
+                                        window.open(
+                                            'https://twitter.com/tab_racing',
+                                            '_blank',
+                                        )
+                                    }
+                                />
                                 <LinkedIcon />
                             </div>
                         </div>

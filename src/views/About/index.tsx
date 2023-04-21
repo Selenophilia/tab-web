@@ -1,11 +1,16 @@
 import Typography from '@mui/material/Typography'
-import ImageContainer from '../../components/ImageContainer/ImageContainer'
-import HoseImage from '../../assets/horse.jpg'
-import Button from '../../components/Button'
-import ArrowIcon from '../../assets/Arrow.svg'
+import ImageContainer from '@/components/ImageContainer/ImageContainer'
+import Button from '@/components/Button'
 import GrayContainer from '@/components/GrayContainers'
 
+import ArrowIcon from '../../assets/Arrow.svg'
+import HoseImage from '../../assets/horse.jpg'
+
 const About = () => {
+    const handleBtn = () => {
+        window.open('https://www.tabnz.org/about-us', '_blank')
+    }
+
     return (
         <div className="about-section">
             <div className="rectangle" />
@@ -35,6 +40,7 @@ const About = () => {
                             Zealand.
                         </Typography>
                         <Button
+                            onClick={handleBtn}
                             color="white"
                             variant="rounded"
                             text="Learn More"

@@ -4,8 +4,7 @@ import ImageContainer from '@/components/ImageContainer/ImageContainer'
 import HeroImage from '@/assets/heroimg.jpg'
 import FloatingActionButtons from '@/components/FloatingActionButton'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
-
-import Button from '../../components/Button'
+import Button from '@/components/Button'
 import ArrowIcon from '../../assets/Arrow.svg'
 
 const HeroSection = () => {
@@ -63,7 +62,7 @@ const HeroSection = () => {
                             onClick={handleClick}
                         />
                         <Button
-                            onClick={handleBtn}
+                            onClick={() => handleBtn()}
                             color="white"
                             variant="rounded"
                             text="Learn More"

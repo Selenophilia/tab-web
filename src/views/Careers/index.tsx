@@ -6,6 +6,10 @@ import ArrowIcon from '../../assets/Arrow.svg'
 import { East } from '@mui/icons-material'
 
 const Careers = () => {
+    const handleBtn = () => {
+        window.open('https://www.tabnz.org/current-roles', '_blank')
+    }
+
     return (
         <div className="careers" id="careers-anchor">
             <div className="heading">
@@ -22,6 +26,7 @@ const Careers = () => {
                         ready to join our team?
                     </Typography>
                     <Button
+                        onClick={handleBtn}
                         className="learn-more"
                         color="white"
                         text="Learn More"
@@ -41,6 +46,7 @@ const Careers = () => {
                                 footer={
                                     <>
                                         <Button
+                                            onClick={handleBtn}
                                             className="card-btn"
                                             color="blue"
                                             text="Learn More"

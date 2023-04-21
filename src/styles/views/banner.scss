@@ -19,6 +19,10 @@
     @include for-retina {
       padding: 0px 400px;
     }
+
+    @include for-desktop {
+      padding: 0px 200px;
+    }
   }
 
   & .mid-heading {
